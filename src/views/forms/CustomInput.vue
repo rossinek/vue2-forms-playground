@@ -1,16 +1,16 @@
 <template>
   <div>
-    <BaseInput v-model="name" label="Name" />
+    <FancyInput v-model="name" label="Name" />
     <pre>{{ name }}</pre>
   </div>
 </template>
 
 <script>
-import BaseInput from '@/components/BaseInput.vue'
+import FancyInput from '@/components/FancyInput.vue'
 
 export default {
   components: {
-    BaseInput,
+    FancyInput,
   },
   data() {
     return {
