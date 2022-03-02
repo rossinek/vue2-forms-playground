@@ -1,22 +1,36 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import PlainForm from '../views/PlainForm.vue'
+import PlainFormWithEvents from '../views/PlainFormWithEvents.vue'
+import TwoWayBinding from '../views/TwoWayBinding.vue'
+import CustomInput from '../views/CustomInput.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    name: 'home',
-    component: HomeView
+    redirect: { name: 'plain-form' }
   },
   {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
+    path: '/plain-form',
+    name: 'plain-form',
+    component: PlainForm
+  },
+  {
+    path: '/plain-form-with-events',
+    name: 'plain-form-with-events',
+    component: PlainFormWithEvents
+  },
+  {
+    path: '/two-way-binding',
+    name: 'two-way-binding',
+    component: TwoWayBinding
+  },
+  {
+    path: '/custom-input',
+    name: 'custom-input',
+    component: CustomInput
   }
 ]
 
